@@ -31,7 +31,4 @@ class Word {
     }
 }
 
-let test = new Word('daniel');
-
-console.log(test.display());
-console.log(test.guess('a'));
+module.exports = Word;
