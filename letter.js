@@ -10,10 +10,14 @@ class Letter {
             }
         };
         this.guess = function(guess) {
-            if (guess.toLowerCase() === this.char) {
-                this.isGuessed = true;
-            } else {
-                this.isGuessed = false;
+            if (!this.isGuessed) {
+                if (guess.toLowerCase() === this.char) {
+                    this.isGuessed = true;
+                    return true;
+                } else {
+                    this.isGuessed = false;
+                    return false;
+                }
             }
         };
     }
