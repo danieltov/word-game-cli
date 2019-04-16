@@ -1,3 +1,5 @@
+// TODO playAgain() function.
+
 // requires
 const Word = require('./word');
 const inquirer = require('inquirer');
