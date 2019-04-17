@@ -16,10 +16,11 @@ let food = ['pizza', 'hamburger', 'spaghetti', 'sushi', 'lasagna', 'steak'],
 secret = '';
 
 //functions
-function getSecretWord() {
+function getSecretWord(callback) {
     let idx = Math.floor(Math.random() * food.length);
     secret = new Word(food[idx]);
     food.splice(idx, 1);
+    callback();
 }
 
 function isLetter(value) {
@@ -58,5 +59,4 @@ function ask() {
     }
 }
 
-getSecretWord();
-check();
+getSecretWord(check);
